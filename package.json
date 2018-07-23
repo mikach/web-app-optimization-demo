@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --mode production && node critical",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "react": "^16.4.1",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
@@ -20,6 +21,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
+    "compression": "^1.7.3",
+    "critical": "^1.3.4",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "prerender-loader": "^1.0.0",

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MediaList from './components/MediaList';
 
 ReactDOM.render(
-    <div>test</div>,
+    <MediaList />,
     document.getElementById('root')
 )

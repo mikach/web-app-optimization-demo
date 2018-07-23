@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './src/main.js',
     output: {
+        filename: '[name].[chunkhash].js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
@@ -27,10 +28,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: '!!prerender-loader?string!./src/index.html',
             filename: './index.html'
         })
     ]
 };
-
-// !!prerender-loader?string!
